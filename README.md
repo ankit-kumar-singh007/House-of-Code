@@ -1,0 +1,30 @@
+# House-of-Code
+# calculator 
+
+""" Built Calculator using function and dictionary"""
+
+def add(n1,n2):
+  return n1+n2
+
+def sub(n1,n2):
+  return n1-n2
+
+def mul(n1,n2):
+  return n1*n2
+
+def div(n1,n2):
+  return n1/n2
+
+operations ={
+  "+":add,"-":sub,"*":mul,"/":div
+}
+digit1 = int(input("enter the number: "))
+for ops in operations:
+  print(ops)
+operations_ops =input("choose the operator")
+digit2=int(input("enter the second number"))
+
+calculation_function= operations[operations_ops]
+answer = calculation_function(digit1,digit2)
+
+print(f"{digit1}{operations_ops}{digit2}={answer}")
